@@ -27,10 +27,10 @@ class _AdminprofilepageState extends State<Adminprofilepage> {
   String name = "";
   String pass = "";
   String phone = "";
-  // void store() async {
-  //   SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
-  //   sharedPreferences.setBool("adlogin", false);
-  // }
+  void store() async {
+    SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
+    sharedPreferences.setBool("adlogin", false);
+  }
 
   bool isuploading = false;
   String imageurl = "";
@@ -192,7 +192,7 @@ class _AdminprofilepageState extends State<Adminprofilepage> {
               ),
               TextButton(
                 onPressed: () {
-                  // storead();
+                  storead();
                   Navigator.pushReplacement(
                       context,
                       MaterialPageRoute(

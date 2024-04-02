@@ -23,15 +23,6 @@ class _LoginscreenState extends State<Loginscreen> {
   final TextEditingController emailcontroller = TextEditingController();
   final TextEditingController passcontroller = TextEditingController();
   final GlobalKey<FormState> formkey = GlobalKey<FormState>();
-  void store() async {
-    if (emailcontroller.text=="haniya@gmail.com") {
-    //   SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
-    // sharedPreferences.setBool("adlogin", true);
-    // } else {
-      SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
-    sharedPreferences.setBool("login", true);
-    }
-  }
 
   bool isvisible = true;
   Future authenticatinlogin(
@@ -41,12 +32,17 @@ class _LoginscreenState extends State<Loginscreen> {
           .signInWithEmailAndPassword(email: email, password: password);
       User? user = reference.user;
       if (user!.uid == Myconstants().adminId) {
+        SharedPreferences adPreferences = await SharedPreferences.getInstance();
+        adPreferences.setBool("adlogin", true);
         Navigator.pushReplacement(context, MaterialPageRoute(
           builder: (context) {
             return const Adminmainscreen();
           },
         ));
       } else {
+        SharedPreferences Preferences = await SharedPreferences.getInstance();
+        Preferences.setBool("login", true);
+
         Navigator.pushReplacement(context, MaterialPageRoute(
           builder: (context) {
             return const Mainscreen();
@@ -74,9 +70,9 @@ class _LoginscreenState extends State<Loginscreen> {
               children: [
                 const customtext(
                     title: "Log In",
-                    color: Color.fromARGB(255, 10, 68, 12),
+                    color: Colors.black,
                     size: 40,
-                    fontWeight: FontWeight.bold),
+                    fontWeight: FontWeight.normal),
                 Padding(
                   padding: const EdgeInsets.only(top: 50, left: 30),
                   child: Container(
@@ -158,7 +154,6 @@ class _LoginscreenState extends State<Loginscreen> {
                                       password: passcontroller.text,
                                       context: context);
                                 }
-                                store();
                               },
                               child: const customcontainer(
                                   textwidget: customtext(

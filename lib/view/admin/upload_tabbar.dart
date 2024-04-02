@@ -1,5 +1,4 @@
 import 'package:carrentalapp/view/admin/main_page.dart';
-import 'package:carrentalapp/view/admin/update_tabbar.dart';
 
 import 'package:carrentalapp/view/admin/popular_upload.dart';
 import 'package:carrentalapp/view/admin/affod_upload.dart';

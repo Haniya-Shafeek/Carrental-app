@@ -4,7 +4,7 @@ import 'package:carrentalapp/view/admin/upload_tabbar.dart';
 import 'package:carrentalapp/view/admin/new_view.dart';
 
 import 'package:carrentalapp/view/admin/popular_view.dart';
-import 'package:carrentalapp/view/user/maun_page.dart';
+
 import 'package:carrentalapp/widgets/customtext.dart';
 
 import 'package:flutter/material.dart';

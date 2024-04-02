@@ -1,4 +1,3 @@
-import 'package:carrentalapp/view/user/maun_page.dart';
 import 'package:carrentalapp/widgets/customtext.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';

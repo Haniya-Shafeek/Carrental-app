@@ -57,8 +57,8 @@ class _ProfilescreenState extends State<Profilescreen> {
   }
 
   void store() async {
-    SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
-    sharedPreferences.setBool("login", false);
+    SharedPreferences Preferences = await SharedPreferences.getInstance();
+    Preferences.setBool("login", false);
   }
 
   @override

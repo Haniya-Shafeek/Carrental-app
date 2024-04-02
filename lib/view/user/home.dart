@@ -1,7 +1,7 @@
 import 'package:carrentalapp/view/user/affo_listview.dart';
 import 'package:carrentalapp/view/user/new_listvew.dart';
 import 'package:carrentalapp/view/user/popular_listview.dart';
-import 'package:carrentalapp/view/user/popular_singleview.dart';
+
 import 'package:carrentalapp/view/user/profile.dart';
 import 'package:carrentalapp/widgets/customstreambulider.dart';
 import 'package:carrentalapp/widgets/customtext.dart';
